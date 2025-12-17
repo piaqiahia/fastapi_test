@@ -10,12 +10,26 @@
 ```bash
 pip install -r requirements.txt
 ```
-### 2. 启动服务
+### 2. 下载模型
+```bash
+https://huggingface.co/BAAI/bge-small-zh-v1.5/tree/main
+bge-small-zh-v1.5/
+├── config.json
+├── pytorch_model.bin
+├── tokenizer.json
+├── tokenizer_config.json
+├── vocab.txt
+├── modules.json
+└── 1_Pooling/
+    └── config.json 
+```
+
+### 3. 启动服务
 ```bash
 uvicorn main:app --reload --port 8000
 ```
 
-### 3. 访问API文档
+### 4. 访问API文档
 | 文档类型 | 访问地址 | 说明 |
 |----------|----------|--------------|
 | **Swagger UI** | http://localhost:8000/docs |所有接口都有交互式文档|
